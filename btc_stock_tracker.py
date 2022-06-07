@@ -71,7 +71,7 @@ def stock_tracker(chart = True):
         collect_price.append(price_tracking_btc()[0])
         collect_time.append(get_time()[2])
         if cycle == 10 and chart == True:
-            #a stock chart is drawn every 10 minutes
+            #a stock chart is drawn every 10 cycles.
             stock_chart(collect_time,collect_price)
         if price_tracking_btc()[0] >= price_alert:
             print('Warning!! The price is currently above', str(price_alert))
